@@ -1,2 +1,4 @@
-node_modules
-Reference.d.ts
+node_modules/
+.cache/
+dist/
+src/Reference.d.ts

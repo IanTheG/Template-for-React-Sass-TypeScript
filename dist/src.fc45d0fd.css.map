@@ -1,0 +1,1 @@
+{"version":3,"sources":["src/styles/pages/index.scss","src/styles/layout/header.scss"],"names":[],"mappings":"AAAA;EACE;;;ACDF;EACE;EACA","file":"src.fc45d0fd.css","sourceRoot":"..","sourcesContent":["body {\n  background-color: whitesmoke;\n}",".header {\n  background-color: yellowgreen;\n  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;\n}"]}

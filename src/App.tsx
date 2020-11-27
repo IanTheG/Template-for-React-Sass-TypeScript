@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (
     <>
-      <Header title={'Mr.'} name={'Ian'} />
-      {/*<Content />
-      <Footer /> */}
+      <Header title={'Mr.'} name={'World'} />
+      <Footer name={'Sunshine'}/>
     </>
   )
 };

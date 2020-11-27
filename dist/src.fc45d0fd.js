@@ -29789,7 +29789,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 // class Header extends React.Component<Props> {
 //   render() {
 //     return (
-//       <h2>Hello {this.props.title} {this.props.name}</h2>
+//       <h2 className="header">Hello {this.props.title} {this.props.name}</h2>
 //     )
 //   }
 // }
@@ -29803,6 +29803,37 @@ var Header = function Header(_a) {
 
 var _default = Header;
 exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/components/Footer/Footer.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+// class Footer extends React.Component<Props> {
+//   render() {
+//     return (
+//       <h2 className="footer">Goodbye {this.props.title} {this.props.name}</h2>
+//     )
+//   }
+// }
+var Footer = function Footer(_a) {
+  var title = _a.title,
+      name = _a.name;
+  return React.createElement("h2", {
+    className: "footer"
+  }, "Goodbye ", title, " ", name);
+};
+
+var _default = Footer;
+exports.default = _default;
 },{"react":"node_modules/react/index.js"}],"src/App.tsx":[function(require,module,exports) {
 "use strict";
 
@@ -29815,18 +29846,22 @@ var _react = _interopRequireDefault(require("react"));
 
 var _Header = _interopRequireDefault(require("./components/Header/Header"));
 
+var _Footer = _interopRequireDefault(require("./components/Footer/Footer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var App = function App() {
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_Header.default, {
     title: 'Mr.',
-    name: 'Ian'
+    name: 'World'
+  }), _react.default.createElement(_Footer.default, {
+    name: 'Sunshine'
   }));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./components/Header/Header":"src/components/Header/Header.tsx"}],"../../../../../../usr/local/lib/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./components/Header/Header":"src/components/Header/Header.tsx","./components/Footer/Footer":"src/components/Footer/Footer.tsx"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -29858,7 +29893,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../../../usr/local/lib/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -29893,12 +29928,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../../../usr/local/lib/node_modules/parcel/src/builtins/bundle-url.js"}],"src/styles/main.scss":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/styles/main.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel/src/builtins/css-loader.js"}],"src/index.tsx":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/index.tsx":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -29912,7 +29947,7 @@ require("./styles/main");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _reactDom.render)(_react.default.createElement(_App.default, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App":"src/App.tsx","./styles/main":"src/styles/main.scss"}],"../../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App":"src/App.tsx","./styles/main":"src/styles/main.scss"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -29940,7 +29975,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52595" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56221" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -30116,5 +30151,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel/src/builtins/hmr-runtime.js","src/index.tsx"], null)
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.tsx"], null)
 //# sourceMappingURL=/src.fc45d0fd.js.map

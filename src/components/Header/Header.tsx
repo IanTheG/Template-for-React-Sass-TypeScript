@@ -10,7 +10,7 @@ interface Props {
 // class Header extends React.Component<Props> {
 //   render() {
 //     return (
-//       <h2>Hello {this.props.title} {this.props.name}</h2>
+//       <h2 className="header">Hello {this.props.title} {this.props.name}</h2>
 //     )
 //   }
 // }
